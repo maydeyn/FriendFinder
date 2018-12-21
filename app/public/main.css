@@ -1,0 +1,35 @@
+body {
+  background: url("./star.png") repeat;
+  height: 100vh;
+  color: white;
+}
+
+header {
+  text-align: center;
+  margin-top: 180px;
+  font-size: 25px;
+}
+
+.nes-container {
+  margin: 80px 140px 80px 140px;
+  padding: 40px;
+}
+
+h2,
+.title {
+  color: black;
+  font-size: 15px;
+}
+
+.nes-btn {
+  background-color: lightgray;
+}
+
+.nes-input {
+  padding: 15px;
+}
+
+checkbox,
+.nes-checkbox {
+  color: white;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Which Pokemon Are You?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>Find out which Pokemon You are!</header>
+
+    <section class="form nes-container with-title">
+      <h2 class="title"> Tell me about yourself!</h2>
+      <div class="nes-field">
+        <label for="name_field">Your name</label>
+        <input type="text" id="name_field" class="nes-input" />
+      </div>
+      <div class="nes-field">
+        <label for="name_field">Your Photo</label>
+        <input type="text" id="photo_field" class="nes-input" />
+      </div>
+    </section>
+    <section class="nes-container with-title">
+      <h2 class="title">Answer these questions!</h2>
+      <label>
+
+      <section class="nes-container with-title">
+        <!-- Q1 -->
+        <h2 class="title">What time do you usually arrive at a party?</h2>
+        <div>
+                <label>
+                        <input type="radio" class="nes-radio" name="answer" checked="">
+                        <span>Yes</span>
+                      </label>
+                      <label>
+                        <input type="radio" class="nes-radio" name="answer">
+                        <span>No</span>
+                      </label>
+        </div>
+      </section>
+      <div>
+        <button type="button" class="nes-btn is-success">Submit</button>
+        <button type="button" class="nes-btn">Reset</button>
+      </div>
+    </section>
+  </body>
+</html>
