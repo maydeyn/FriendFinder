@@ -1,0 +1,22 @@
+body {
+  background: url("./star.png") repeat;
+  height: 100vh;
+  font-family: "Press Start 2P";
+}
+
+header {
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin-top: 180px;
+}
+
+.container {
+  margin-top: 240px;
+  margin-left: 40%;
+}
+
+.nes-balloon {
+  width: 300px;
+}

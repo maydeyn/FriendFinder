@@ -1,0 +1,39 @@
+body {
+  background: url("./star.png") repeat;
+  height: 100vh;
+  color: white;
+  font-family: "Press Start 2P";
+  font-size: 15px;
+}
+
+header {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 25px;
+}
+
+.nes-container:not(.questions) {
+  margin: 80px 100px 80px 100px;
+  padding: 40px;
+}
+
+.nes-container.with-title > .title {
+  background-color: black;
+}
+
+.nes-btn {
+  background-color: lightgray;
+}
+
+.questions {
+  margin: 30px;
+}
+
+.nes-field {
+  padding: 15px 30px 15px 30px;
+}
+
+.nes-container::after {
+  border-color: rgba(0, 75, 255, 0.7);
+  border-width: 3px;
+}

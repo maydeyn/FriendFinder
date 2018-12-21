@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Which Pokemon Are You?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="survey.css" />
+    <script src="survey.js"></script>
+  </head>
+  <body>
+    <header>Find out which Pokemon You are!</header>
+
+    <section class="form nes-container with-title">
+      <h2 class="title">Tell me about yourself!</h2>
+      <div class="nes-field">
+        <label for="name_field">Your name *</label>
+        <input type="text" id="name_field" class="nes-input" />
+      </div>
+      <div class="nes-field">
+        <label for="name_field">Link to Your Photo *</label>
+        <input type="text" id="photo_field" class="nes-input" />
+      </div>
+    </section>
+    <section class="nes-container with-title">
+      <h2 class="title">Answer these questions!</h2>
+
+      <!-- Q1 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What time do you usually arrive at a party?</h2>
+        <div>
+          <select class="user-select" id="a1" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Early</option>
+            <option value="2">On time</option>
+            <option value="3">Late</option>
+            <option value="4">Staying Home</option>
+          </select>
+        </div>
+      </section>
+      <!-- Q2 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">Do you prefer being outdoors when it's?</h2>
+        <div>
+          <select class="user-select" id="a2" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Snowing</option>
+            <option value="2">Raining</option>
+            <option value="3">Sunny</option>
+            <option value="4">Foggy</option>
+          </select>
+        </div>
+      </section>
+      <!-- Q3 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What's your favorite subject to learn about?</h2>
+        <div>
+          <select class="user-select" id="a3" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Geology</option>
+            <option value="2">Biology</option>
+            <option value="3">Astronomy</option>
+            <option value="4">Chemistry</option>
+          </select>
+        </div>
+      </section>
+      <!-- Q4 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">Where would you prefer to go on vacation</h2>
+        <div>
+          <select class="user-select" id="a4" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Beach</option>
+            <option value="2">Mountains</option>
+            <option value="3">Forest</option>
+            <option value="4">City</option>
+          </select>
+        </div>
+      </section>
+      <!-- Q5 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What is your favorite natural pheonmenon?</h2>
+        <div>
+          <select class="user-select" id="a5" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Rainbows</option>
+            <option value="2">Shooting stars</option>
+            <option value="3">Eclipses</option>
+            <option value="4">Auroras</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Q6 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What is your favorite type of food to eat?</h2>
+        <div>
+          <select class="user-select" id="a6" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Meat</option>
+            <option value="2">Seafood</option>
+            <option value="3">Vegetables</option>
+            <option value="4">Candy</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Q7 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What do you do to relax?</h2>
+        <div>
+          <select class="user-select" id="a7" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Read</option>
+            <option value="2">Go for a hike</option>
+            <option value="3">Play video games</option>
+            <option value="4">Hangout with friends</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Q8 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What is your biggest fear?</h2>
+        <div>
+          <select class="user-select" id="a8" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Heights</option>
+            <option value="2">Darkness</option>
+            <option value="3">Tight spaces</option>
+            <option value="4">Bugs</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Q9 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What is your favorite time of day?</h2>
+        <div>
+          <select class="user-select" id="a9" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Morning</option>
+            <option value="2">Afternoon</option>
+            <option value="3">Evening</option>
+            <option value="4">Late night</option>
+          </select>
+        </div>
+      </section>
+      <!-- Q10 -->
+      <section class="nes-container with-title questions">
+        <h2 class="title">What is your favorite season?</h2>
+        <div>
+          <select class="user-select" id="a10" required>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Spring</option>
+            <option value="2">Summer</option>
+            <option value="3">Autumn</option>
+            <option value="4">Winter</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <button type="button" class="nes-btn is-warning" id="submit">
+        Submit
+      </button>
+      <button type="button" class="nes-btn">Reset</button>
+    </section>
+
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <div class="nes-container is-rounded">
+            <h2 id="match-name">Eevee</h2>
+            <img
+              id="match-img"
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/133.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

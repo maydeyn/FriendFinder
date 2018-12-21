@@ -1,4 +1,9 @@
 INSERT INTO profiles
     (name, photo, score)
 VALUES
-    ("Sup bro?", "Ruby Pradhan");
+    ("Pokemon", "", "");
+
+INSERT INTO profiles
+    (name, photo, score)
+VALUES
+    ("Pokemon", "", "");
