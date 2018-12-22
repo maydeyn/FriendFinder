@@ -6,194 +6,338 @@
     <title>Which Pokemon Are You?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://fonts.googleapis.com/css?family=Press+Start+2P"
       rel="stylesheet"
     />
     <link href="https://unpkg.com/nes.css/css/nes.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="survey.css" />
-    <script src="survey.js"></script>
+    <link
+      rel="icon"
+      href="https://i.pinimg.com/originals/6c/76/8e/6c768e9fff3f80e61f59cacfd397284c.png"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>Find out which Pokemon You are!</header>
+    <form>
+      <section class="form nes-container with-title">
+        <h2 class="title">Tell me about yourself!</h2>
+        <div class="nes-field">
+          <label for="name_field">Your name *</label>
+          <input type="text" id="name_field" class="nes-input" />
+        </div>
+        <div class="nes-field">
+          <label for="name_field">Link to Your Photo *</label>
+          <input type="text" id="photo_field" class="nes-input" />
+        </div>
+      </section>
+      <section class="nes-container with-title">
+        <h2 class="title">Answer these questions!</h2>
 
-    <section class="form nes-container with-title">
-      <h2 class="title">Tell me about yourself!</h2>
-      <div class="nes-field">
-        <label for="name_field">Your name *</label>
-        <input type="text" id="name_field" class="nes-input" />
-      </div>
-      <div class="nes-field">
-        <label for="name_field">Link to Your Photo *</label>
-        <input type="text" id="photo_field" class="nes-input" />
-      </div>
-    </section>
-    <section class="nes-container with-title">
-      <h2 class="title">Answer these questions!</h2>
+        <!-- Q1 -->
 
-      <!-- Q1 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What time do you usually arrive at a party?</h2>
-        <div>
-          <select class="user-select" id="a1" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Early</option>
-            <option value="2">On time</option>
-            <option value="3">Late</option>
-            <option value="4">Staying Home</option>
-          </select>
-        </div>
-      </section>
-      <!-- Q2 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">Do you prefer being outdoors when it's?</h2>
-        <div>
-          <select class="user-select" id="a2" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Snowing</option>
-            <option value="2">Raining</option>
-            <option value="3">Sunny</option>
-            <option value="4">Foggy</option>
-          </select>
-        </div>
-      </section>
-      <!-- Q3 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What's your favorite subject to learn about?</h2>
-        <div>
-          <select class="user-select" id="a3" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Geology</option>
-            <option value="2">Biology</option>
-            <option value="3">Astronomy</option>
-            <option value="4">Chemistry</option>
-          </select>
-        </div>
-      </section>
-      <!-- Q4 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">Where would you prefer to go on vacation</h2>
-        <div>
-          <select class="user-select" id="a4" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Beach</option>
-            <option value="2">Mountains</option>
-            <option value="3">Forest</option>
-            <option value="4">City</option>
-          </select>
-        </div>
-      </section>
-      <!-- Q5 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What is your favorite natural pheonmenon?</h2>
-        <div>
-          <select class="user-select" id="a5" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Rainbows</option>
-            <option value="2">Shooting stars</option>
-            <option value="3">Eclipses</option>
-            <option value="4">Auroras</option>
-          </select>
-        </div>
-      </section>
+        <section class="nes-container with-title questions">
+          <h2 class="title">What time do you usually arrive at a party?</h2>
+          <div>
+            <select class="user-select" id="a1" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Early</option>
+              <option value="2">On time</option>
+              <option value="3">Late</option>
+              <option value="4">Staying Home</option>
+            </select>
+          </div>
+        </section>
+        <!-- Q2 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">Do you prefer being outdoors when it's?</h2>
+          <div>
+            <select class="user-select" id="a2" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Snowing</option>
+              <option value="2">Raining</option>
+              <option value="3">Sunny</option>
+              <option value="4">Foggy</option>
+            </select>
+          </div>
+        </section>
+        <!-- Q3 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">What's your favorite subject to learn about?</h2>
+          <div>
+            <select class="user-select" id="a3" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Geology</option>
+              <option value="2">Biology</option>
+              <option value="3">Astronomy</option>
+              <option value="4">Chemistry</option>
+            </select>
+          </div>
+        </section>
+        <!-- Q4 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">Where would you prefer to go on vacation</h2>
+          <div>
+            <select class="user-select" id="a4" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Beach</option>
+              <option value="2">Mountains</option>
+              <option value="3">Forest</option>
+              <option value="4">City</option>
+            </select>
+          </div>
+        </section>
+        <!-- Q5 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">What is your favorite natural pheonmenon?</h2>
+          <div>
+            <select class="user-select" id="a5" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Rainbows</option>
+              <option value="2">Shooting stars</option>
+              <option value="3">Eclipses</option>
+              <option value="4">Auroras</option>
+            </select>
+          </div>
+        </section>
 
-      <!-- Q6 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What is your favorite type of food to eat?</h2>
-        <div>
-          <select class="user-select" id="a6" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Meat</option>
-            <option value="2">Seafood</option>
-            <option value="3">Vegetables</option>
-            <option value="4">Candy</option>
-          </select>
-        </div>
-      </section>
+        <!-- Q6 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">What is your favorite type of food to eat?</h2>
+          <div>
+            <select class="user-select" id="a6" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Meat</option>
+              <option value="2">Seafood</option>
+              <option value="3">Vegetables</option>
+              <option value="4">Candy</option>
+            </select>
+          </div>
+        </section>
 
-      <!-- Q7 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What do you do to relax?</h2>
-        <div>
-          <select class="user-select" id="a7" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Read</option>
-            <option value="2">Go for a hike</option>
-            <option value="3">Play video games</option>
-            <option value="4">Hangout with friends</option>
-          </select>
-        </div>
-      </section>
+        <!-- Q7 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">What do you do to relax?</h2>
+          <div>
+            <select class="user-select" id="a7" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Read</option>
+              <option value="2">Go for a hike</option>
+              <option value="3">Play video games</option>
+              <option value="4">Hangout with friends</option>
+            </select>
+          </div>
+        </section>
 
-      <!-- Q8 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What is your biggest fear?</h2>
-        <div>
-          <select class="user-select" id="a8" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Heights</option>
-            <option value="2">Darkness</option>
-            <option value="3">Tight spaces</option>
-            <option value="4">Bugs</option>
-          </select>
-        </div>
-      </section>
+        <!-- Q8 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">What is your biggest fear?</h2>
+          <div>
+            <select class="user-select" id="a8" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Heights</option>
+              <option value="2">Darkness</option>
+              <option value="3">Tight spaces</option>
+              <option value="4">Bugs</option>
+            </select>
+          </div>
+        </section>
 
-      <!-- Q9 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What is your favorite time of day?</h2>
-        <div>
-          <select class="user-select" id="a9" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Morning</option>
-            <option value="2">Afternoon</option>
-            <option value="3">Evening</option>
-            <option value="4">Late night</option>
-          </select>
-        </div>
-      </section>
-      <!-- Q10 -->
-      <section class="nes-container with-title questions">
-        <h2 class="title">What is your favorite season?</h2>
-        <div>
-          <select class="user-select" id="a10" required>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Spring</option>
-            <option value="2">Summer</option>
-            <option value="3">Autumn</option>
-            <option value="4">Winter</option>
-          </select>
-        </div>
-      </section>
+        <!-- Q9 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">What is your favorite time of day?</h2>
+          <div>
+            <select class="user-select" id="a9" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Morning</option>
+              <option value="2">Afternoon</option>
+              <option value="3">Evening</option>
+              <option value="4">Late night</option>
+            </select>
+          </div>
+        </section>
+        <!-- Q10 -->
+        <section class="nes-container with-title questions">
+          <h2 class="title">What is your favorite season?</h2>
+          <div>
+            <select class="user-select" id="a10" required>
+              <option value="" disabled selected>Choose your option</option>
+              <option value="1">Spring</option>
+              <option value="2">Summer</option>
+              <option value="3">Autumn</option>
+              <option value="4">Winter</option>
+            </select>
+          </div>
+        </section>
 
-      <!-- BUTTONS -->
-      <button type="button" class="nes-btn is-warning" id="submit">
-        Submit
+        <!-- BUTTONS -->
+        <button
+          type="submit"
+          value="submit"
+          class="nes-btn is-warning"
+          id="submit"
+          data-toggle="modal"
+          data-target="#dialogo-destinos"
+        >
+          <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+        </button>
+        <button type="reset" value="reset" class="nes-btn" id="reset">
+          Reset
+        </button>
+      </section>
+    </form>
+    <footer>
+      <button type="button" class="nes-btn" a href="api/data">
+        API Pokemon List
       </button>
-      <button type="button" class="nes-btn">Reset</button>
-    </section>
-
-    <div class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h2 class="modal-title"><strong>Best Match</strong></h2>
-        </div>
-        <div class="modal-body">
-          <div class="nes-container is-rounded">
-            <h2 id="match-name">Eevee</h2>
+      <button
+        type="button"
+        class="nes-icon github is-medium"
+        a
+        href="https://github.com/maydeyn/FriendFinder"
+      ></button>
+    </footer>
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h2 class="modal-title"><strong>You are...</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name">Eevee!</h2>
             <img
               id="match-img"
               src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/133.png"
               alt=""
             />
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">
-            Close
-          </button>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
+    <style>
+      body {
+        background: url("data:image/png;base64,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")
+          repeat;
+        height: 100vh;
+        color: white;
+        font-family: "Press Start 2P";
+        font-size: 15px;
+      }
+
+      header {
+        text-align: center;
+        margin-top: 120px;
+        font-size: 25px;
+      }
+
+      .nes-container:not(.questions) {
+        margin: 80px 100px 80px 100px;
+        padding: 40px;
+      }
+
+      .nes-container.with-title > .title {
+        background-color: black;
+      }
+
+      .nes-btn {
+        background-color: lightgray;
+      }
+
+      .questions {
+        margin: 30px;
+      }
+
+      .nes-field {
+        padding: 15px 30px 15px 30px;
+      }
+
+      .nes-container::after {
+        border-color: rgba(0, 75, 255, 0.7);
+        border-width: 3px;
+      }
+    </style>
+    <script>
+      $(document).ready(function() {
+        $("#submit").on("click", function(event) {
+          event.preventDefault();
+
+          // Form validation
+          function validateForm() {
+            var isValid = true;
+            $(".nes-input").each(function() {
+              if ($(this).val() === "") {
+                isValid = false;
+              }
+            });
+
+            $(".chosen-select").each(function() {
+              if ($(this).val() === "") {
+                isValid = false;
+              }
+            });
+            return isValid;
+          }
+
+          // If all required fields are filled
+          if (validateForm()) {
+            // Create an object for the user's data
+            var userData = {
+              name: $("#name_field").val(),
+              photo: $("#photo_field").val(),
+              scores: [
+                $("#a1").val(),
+                $("#a2").val(),
+                $("#a3").val(),
+                $("#a4").val(),
+                $("#a5").val(),
+                $("#a6").val(),
+                $("#a7").val(),
+                $("#a8").val(),
+                $("#a9").val(),
+                $("#a10").val()
+              ]
+            };
+
+            // AJAX post the data to the friends API.
+            $.post("/api/friends", userData, function(data) {
+              // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+              $("#match-name").text(data.name);
+              $("#match-img").attr("src", data.photo);
+              // Show the modal with the best match
+              $("#results-modal").modal("toggle");
+            });
+          } else {
+            alert("Please fill out all fields before submitting!");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

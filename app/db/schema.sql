@@ -1,7 +1,7 @@
 
-CREATE DATABASE friends_db;
+CREATE DATABASE pokemons_db;
 
-USE friends_db;
+USE pokemons_db;
 
 CREATE TABLE
 IF NOT EXISTS profiles
@@ -12,7 +12,7 @@ id int NOT NULL auto_increment,
    photo VARCHAR
 (255),
    scores VARCHAR
-(25)
+(25),
 PRIMARY key
 (id)
 );
