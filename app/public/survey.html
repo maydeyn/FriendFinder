@@ -203,14 +203,19 @@
       </section>
     </form>
     <footer>
-      <button type="button" class="nes-btn" a href="api/data">
+      <button
+        type="button"
+        class="nes-btn"
+        onclick="location.href='./api/pokemons'"
+      >
         API Pokemon List
       </button>
+      <br />
+      <br />
       <button
         type="button"
         class="nes-icon github is-medium"
-        a
-        href="https://github.com/maydeyn/FriendFinder"
+        onclick="location.href='https://github.com/maydeyn/FriendFinder'"
       ></button>
     </footer>
     <!-- Modal -->
@@ -281,6 +286,14 @@
       .nes-container::after {
         border-color: rgba(0, 75, 255, 0.7);
         border-width: 3px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 0 40px 0;
+      }
+      .github {
+        padding-top: 30px;
       }
     </style>
     <script>
