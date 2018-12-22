@@ -18,10 +18,9 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <!-- <header>Find out which Pokemon You are!</header> -->
     <style>
       body {
-        background: url("data:image/png;base64,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")
+        background: url("https://eightbitweapon.files.wordpress.com/2014/07/8-bit-weapon-bits-with-byte-background.png")
           repeat;
         height: 100vh;
         font-family: "Press Start 2P";
@@ -54,7 +53,9 @@
               class="nes-btn is-success"
               onclick="location.href='./survey'"
             >
-              Click here to find out which pokemon you are!</a>
+              Click here to find out which pokemon you are!<i
+                class="nes-icon heart is-small"
+              ></i>
             </button>
           </div>
         </div>
