@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Which Pokemon Are You?</title>
+    <title>Find Your Pokemon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="stylesheet"
@@ -21,15 +21,9 @@
       rel="icon"
       href="https://i.pinimg.com/originals/6c/76/8e/6c768e9fff3f80e61f59cacfd397284c.png"
     />
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
   </head>
@@ -190,21 +184,46 @@
         </section>
 
         <!-- BUTTONS -->
-        <button
-          type="submit"
-          value="submit"
-          class="nes-btn is-warning"
-          id="submit"
-          data-toggle="modal"
-          data-target="#dialogo-destinos"
-        >
-          <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
-        </button>
-        <button type="reset" value="reset" class="nes-btn" id="reset">
-          Reset
-        </button>
+        <div class="formButtons">
+          <button
+            type="submit"
+            value="submit"
+            class="nes-btn is-warning"
+            id="submit"
+          >
+            <i class="fa fa-check-circle" aria-hidden="true"></i> Submit
+          </button>
+          <button type="reset" value="reset" class="nes-btn" id="reset">
+            Reset
+          </button>
+        </div>
       </section>
     </form>
+
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h2 class="modal-title"><strong>Your pokemon is ...</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img
+              id="match-img"
+              src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png"
+              alt=""
+            />
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
     <footer>
       <button
         type="button"
@@ -221,34 +240,8 @@
         onclick="location.href='https://github.com/maydeyn/FriendFinder'"
       ></button>
     </footer>
-    <!-- Modal -->
-    <div id="results-modal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
-            <h2 class="modal-title"><strong>You are...</strong></h2>
-          </div>
-          <div class="modal-body">
-            <h2 id="match-name">Eevee!</h2>
-            <img
-              id="match-img"
-              src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/133.png"
-              alt=""
-            />
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
+    <!-- CSS -->
     <style>
       body {
         background: url("https://eightbitweapon.files.wordpress.com/2014/07/8-bit-weapon-bits-with-byte-background.png")
@@ -298,7 +291,13 @@
       .github {
         padding-top: 30px;
       }
+      .formButtons {
+        text-align: center;
+      }
+      /* ADD MODAL CSS */
     </style>
+
+    <!-- Front End JS -->
     <script>
       $(document).ready(function() {
         $("#submit").on("click", function(event) {
@@ -313,7 +312,7 @@
               }
             });
 
-            $(".chosen-select").each(function() {
+            $(".user-select").each(function() {
               if ($(this).val() === "") {
                 isValid = false;
               }
@@ -341,12 +340,9 @@
               ]
             };
 
-            // AJAX post the data to the friends API.
-            $.post("/api/friends", userData, function(data) {
-              // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+            $.post("/api/pokemons", userData, function(data) {
               $("#match-name").text(data.name);
               $("#match-img").attr("src", data.photo);
-              // Show the modal with the best match
               $("#results-modal").modal("toggle");
             });
           } else {

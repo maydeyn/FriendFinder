@@ -1,3 +1,5 @@
+const path = require("path");
+
 const pokemons = require("../db/data.js");
 
 module.exports = function(app) {
@@ -6,8 +8,32 @@ module.exports = function(app) {
   });
 
   app.post("/api/pokemons", function(req, res) {
-    var userData = req.body;
-    console.log(userData);
+    const userInput = req.body;
+    console.log("user input = " + JSON.stringify(userInput));
+    const userScore = userInput.scores;
+    console.log("user score =" + userScore);
+
+    var matchName = "";
+    var matchImage = "";
+    var totalCount = -1;
+
+    for (var i = 0; i < pokemons.length; i++) {
+      var counter = 0;
+      for (var a = 0; a < userScore.length; a++) {
+        if (pokemons[i].scores[a] === userScore[a]) {
+          counter = counter + 1;
+        }
+      }
+      if (counter > totalCount) {
+        totalcounter = counter;
+        matchName = pokemons[i].name;
+        matchImage = pokemons[i].photo;
+      }
+    }
+    pokemons.push(userInput);
+    console.log(
+      res.json({ status: "ok", matchName: matchName, matchImage: matchImage })
+    );
   });
 };
 
